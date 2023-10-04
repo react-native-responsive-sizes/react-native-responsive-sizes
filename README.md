@@ -15,6 +15,6 @@ Simple & lightweight react-native package to help you make your mobile app look 
 
 - Please see the [`sample.tsx`](https://github.com/react-native-responsive-sizes/react-native-responsive-sizes/blob/main/sample.tsx) file for a sample implementation, which is what was used for creating the screenshot below.
 
-- Notice how in the screenshot below, the margin between the red and blue boxes is smaller on a smaller screen, so that the margin looks perfectly proportional on all screen sizes. This is because the margin is set to `responsive.size(10)` which means that the margin will be 10 pixels on an iPhone 14 Pro, but slightly smaller on a smaller screen, such as an iPhone SE.
+- Notice how in the screenshot below, the margin between the red and blue boxes looks perfectly proportional on all screen sizes. This is because the margin is set to `responsive.size(10)` which means that the margin will be 10 pixels on an iPhone 14 Pro, but slightly fewer pixels on a smaller screen, such as an iPhone SE.
 
 ![](images/screenshot1.png)
