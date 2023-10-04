@@ -2,7 +2,7 @@
   "dependencies": {
     "react-native": "^0.72.5"
   },
-  "name": "@zernach/react-native-responsive-sizes",
+  "name": "react-native-responsive-sizes",
   "description": "Simple & lightweight react-native package to help you make your mobile app look terrific on every screen size.",
   "version": "1.0.0",
   "main": "index.ts",
