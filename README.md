@@ -1,5 +1,75 @@
 # 📱 react-native-responsive-sizes
 
+## ⚙️ Installation
+
+- You may use either `npm` or `yarn` to install this package.
+
+```bash
+npm install react-native-responsive-sizes
+```
+
+```bash
+yarn add react-native-responsive-sizes
+```
+
+## ⚙️ Usage
+
+```typescript
+import React from "react";
+import { useResponsiveSizes } from "react-native-responsive-sizes";
+import { View, Text } from "react-native";
+
+export const SampleComponent = () => {
+  // Instantiate the hook
+  const responsive = useResponsiveSizes();
+
+  return (
+    <View
+      style={{
+        width: responsive.width(90), // 90% of the screen's width
+        height: responsive.size(600), // originally 600
+        marginTop: responsive.size(10), // originally 10
+        backgroundColor: "blue",
+        alignSelf: "center",
+      }}
+    >
+      {[
+        "First",
+        "Second",
+        "Third",
+        "Fourth",
+        "Fifth",
+        "Sixth",
+        "Seventh",
+        "Eigth",
+        "Ninth",
+        "Tenth",
+      ].map((text, index) => (
+        <View
+          key={`${text} ${index}`}
+          style={{
+            backgroundColor: "red",
+            justifyContent: "center",
+            marginTop: responsive.size(10), // originally 10
+            height: responsive.size(40), // originally 40
+            marginHorizontal: responsive.size(10), // originally 10
+          }}
+        >
+          <Text
+            style={{
+              fontSize: responsive.fontSize(14),
+              textAlign: "center",
+            }}
+          >
+            {text}
+          </Text>
+        </View>
+      ))}
+    </View>
+  );
+};
+```
+
 ## ⚙️ Description
 
 Simple & lightweight react-native package to help you make your mobile app look terrific on every screen size. You may use the following functions to make your app more responsive.
