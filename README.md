@@ -11,10 +11,11 @@ Simple & lightweight react-native package to help you make your mobile app look 
 | `responsive.height()`                 | number from 0-100, which corresponds to the percentage of the screen's height | number of pixels equal to the percentage of the screen's height | If you use `responsive.height(50)` then you will receive a number of pixels equal to 50% of the screen's height                                                                                                                   |
 | `responsive.fontSize()`               | font size number                                                              | font size that's more proportional to the size of the screen    | If you pass it `responsive.fontSize(32)` then you will receive a 32-point font-size on an iPhone 14 Pro, but slightly smaller font-sizes on smaller devices                                                                       |
 
-## ⚙️ Examples
+## ⚙️ Before & After Video Demonstration
 
-- Please see the [`sample.tsx`](https://github.com/react-native-responsive-sizes/react-native-responsive-sizes/blob/main/sample.tsx) file for a sample implementation, which is what was used for creating the screenshot below.
-
-- Notice how in the screenshot below, the margin between the red and blue boxes looks perfectly proportional on all screen sizes. This is because the margin is set to `responsive.size(10)` which means that the margin will be 10 pixels on an iPhone 14 Pro, but slightly fewer pixels on a smaller screen, such as an iPhone SE.
-
-![](https://github.com/react-native-responsive-sizes/assets/blob/main/images/screenshot1.png?raw=true)
+- In the video below, you can see how the app looks before and after using `react-native-responsive-sizes`
+- In the BEFORE code, you can see that the styles are using constant values, such as: height of 600, marginTop of 10, marginHorizontal of 10, etc.
+- But in the AFTER code, you can see some very simple changes were made: responsive.size(600), responsive.size(10), responsive.size(10), etc.
+- With those changes, the app looks much proportional on screens of different aspect ratios.
+  <br/><br/>
+  <video src="https://github.com/react-native-responsive-sizes/assets/raw/main/videos/beforeAfter.mp4" controls="controls"></video>
