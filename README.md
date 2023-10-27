@@ -85,7 +85,7 @@ Simple & lightweight react-native package to help you make your mobile app look 
 
 - Video can be found below, but if you cannot see it, then please [follow this link](https://github.com/react-native-responsive-sizes/react-native-responsive-sizes).
 - In the video below, you can see how the app looks before and after using `react-native-responsive-sizes`
-- In the BEFORE code, you can see that the styles are using constant values, such as: height of 600, marginTop of 10, marginHorizontal of 10, etc.
+- In the BEFORE code, you can see that the styles use constant values, such as: height of 600, marginTop of 10, marginHorizontal of 10, etc.
 - But in the AFTER code, you can see some very simple changes were made: responsive.size(600), responsive.size(10), responsive.size(10), etc.
 - With those changes, the app looks much proportional on screens of different aspect ratios.
 
