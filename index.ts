@@ -1,7 +1,7 @@
-import { Dimensions } from "react-native";
+import { Dimensions, Platform, StatusBar } from "react-native";
 
-const windowWidth = Dimensions.get('screen').width;
-const windowHeight = Dimensions.get('screen').height;
+const windowWidth = Dimensions.get("screen").width;
+const windowHeight = Dimensions.get("screen").height;
 
 export const size = (size: number): number => {
   /*
@@ -36,13 +36,19 @@ export const fontSize = (fontSize: number) => {
   /*
    * Pass it a number, and it will return a font size that's proportional to the screen size.
    */
-  const { width } = Dimensions.get('window');
-  // Base screen width in design (e.g., iPhone 11)
-  const baseWidth = 375;
-  // Calculate scale ratio
-  const scale = width / baseWidth;
-  // Return the responsive font size
-  return fontSize * scale;
+  const multiplier = 680;
+  const standardLength =
+    windowWidth > windowHeight ? windowWidth : windowHeight;
+  const offset =
+    windowWidth > windowHeight
+      ? 0
+      : Platform.OS === "ios"
+      ? 78
+      : StatusBar.currentHeight ?? 0;
+  const deviceHeight =
+    Platform.OS === "android" ? standardLength - offset : standardLength;
+  const heightPercent = (fontSize * deviceHeight) / multiplier;
+  return Math.round(heightPercent);
 };
 
 export const hitSlop = {
