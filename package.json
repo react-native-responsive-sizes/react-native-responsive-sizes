@@ -4,7 +4,7 @@
   },
   "name": "react-native-responsive-sizes",
   "description": "Simple & lightweight react-native package to help you make your mobile app look terrific on every screen size.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.ts",
   "devDependencies": {},
   "scripts": {
