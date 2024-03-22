@@ -16,19 +16,16 @@ yarn add react-native-responsive-sizes
 
 ```typescript
 import React from "react";
-import { useResponsiveSizes } from "react-native-responsive-sizes";
+import { width, height, size, fontSize } from "react-native-responsive-sizes";
 import { View, Text } from "react-native";
 
 export const SampleComponent = () => {
-  // Instantiate the hook
-  const responsive = useResponsiveSizes();
-
   return (
     <View
       style={{
-        width: responsive.width(90), // 90% of the screen's width
-        height: responsive.size(600), // originally 600
-        marginTop: responsive.size(10), // originally 10
+        width: width(90), // 90% of the screen's width
+        height: size(600), // originally 600
+        marginTop: size(10), // originally 10
         backgroundColor: "blue",
         alignSelf: "center",
       }}
@@ -50,14 +47,14 @@ export const SampleComponent = () => {
           style={{
             backgroundColor: "red",
             justifyContent: "center",
-            marginTop: responsive.size(10), // originally 10
-            height: responsive.size(40), // originally 40
-            marginHorizontal: responsive.size(10), // originally 10
+            marginTop: size(10), // originally 10
+            height: size(40), // originally 40
+            marginHorizontal: size(10), // originally 10
           }}
         >
           <Text
             style={{
-              fontSize: responsive.fontSize(14),
+              fontSize: fontSize(14),
               textAlign: "center",
             }}
           >
